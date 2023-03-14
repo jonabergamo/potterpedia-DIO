@@ -1,0 +1,95 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+ul {
+  list-style: none;
+  padding-left: 5px;
+}
+a {
+  color: blue;
+  text-decoration: none;
+}
+.bar {
+  background-color: #f9f9fb;
+  padding: 15px;
+  border-top: solid 1px #cdcdcd;
+  border-bottom: solid 1px #cdcdcd;
+}
+.content {
+  max-width: 1440px;
+  margin: auto;
+  grid-gap: 3rem;
+  display: grid;
+  gap: 3rem;
+  grid-template-areas: "sidebar main anchors";
+  grid-template-columns: minmax(0, 15rem) minmax(0, 2.5fr) minmax(0, 15rem);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 80px;
+}
+#logoText {
+  font-family: monospace;
+  font-size: 2.5rem;
+  padding-left: 30px;
+  /* Primeiro passo: definir um degradê como fundo */
+  background-image: linear-gradient(
+    to bottom,
+    rgb(103, 19, 187),
+    rgb(185, 1, 163),
+    rgb(84, 38, 212)
+  );
+
+  /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+  background-clip: text;
+  -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+  /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+  -webkit-text-fill-color: transparent;
+
+  /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+  color: black;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  min-height: 100px;
+  border-top: solid 1px #cdcdcd;
+}
+.anchors {
+  border-left: solid 1px #cdcdcd;
+  padding-left: 15px;
+}
+.sidebar {
+  border-right: solid 1px #cdcdcd;
+}
+
+footer {
+  background-color: #e6e6e6;
+}
+
+footer p {
+  padding-left: 50px;
+}
